@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Transferred</title>
+    <style>
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 60px;
+        }
+        .details {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .home-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .home-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: aqua;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transferred</h1>
+    <div class="details">
+        <p>Amount Transferred in SGD: <span id="amountSGD"></span></p>
+        <p>Amount Transferred in Selected Currency: <span id="amountCurrency"></span></p>
+        <p>Selected Currency: <span id="selectedCurrency"></span></p>
+    </div>
+    <div class="home-button">
+        <a href="HomePage.html">Home</a>
+    </div>
+    <script>
+        const amountSGD = localStorage.getItem("amountSGD");
+        const exchangedAmount = localStorage.getItem("exchangedAmount");
+        const selectedCurrency = localStorage.getItem("selectedCurrency");
+
+        document.getElementById("amountSGD").textContent = amountSGD;
+        document.getElementById("amountCurrency").textContent = exchangedAmount;
+        document.getElementById("selectedCurrency").textContent = selectedCurrency;
+    </script>
+</body>
+</html>
